@@ -1,0 +1,34 @@
+Implementation Steps:
+1)	Choose q, t where q is a prime number and t is the number of error correction bits
+
+2)	Compute n, N and K
+	a.	n = q * q
+	b.	N = 2 * q * t
+	c.	K = n + N
+
+3)	Generate Non-singular matrix, S and its inverse, S^-1  (order n x n)
+
+4)	Generate Permutation matrix, P and its inverse, P^-1 (order K x K)
+
+5)	Generate generator matrix using OLSC, G (order n x K) and also the parity check matrix, H of order (N x K)
+
+6)	S, P, and G will be the private keys. These will be generated in the software and hence are precomputed and stored.
+
+7)	Compute public key, G’ = S * G * P (order n x K) 
+
+8)	Encryption
+	a.	m = n bits, compute codeword, C = m * G’, C will be K bits
+	b.	codeword, C is further obfuscated by error, e (n bits). e is t of 1’s.  
+	c.	Compute Cipher, c = C + e (add e to N-bit MSB of C)  (c will be K bits)
+
+9)	Decryption
+	a.	c’ = c * P^-1 = (m * G’ + e) * P-1 = (m * S * G * P * P^-1) + (e * P^-1) = (m * S * G) + (e * P^-1)
+	b.	Perform error-correction using parity-check matrix, H
+		Compute u = H * c’
+		For i=0 to n 
+			m_i’ = u_i > q/2 ? ~ci’ : c_i
+		Output will be m * S
+
+	c.	Compute m * S * S^-1 = m
+
+

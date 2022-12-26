@@ -1,0 +1,49 @@
+/** @module : pars
+ *  @author : Secure Trusted and Assured Microelectronics (STAM) Center
+
+ *  Copyright (c) 2023 PQC.Secure (STAM/SCAI/ASU)
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  of this software and associated documentation files (the "Software"), to deal
+ *  in the Software without restriction, including without limitation the rights
+ *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  copies of the Software, and to permit persons to whom the Software is
+ *  furnished to do so, subject to the following conditions:
+ *  The above copyright notice and this permission notice shall be included in
+ *  all copies or substantial portions of the Software.
+
+ *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ *  THE SOFTWARE.
+ */
+ 
+// prime number
+parameter q = 3;
+//number of bits that can be error-corrected 
+parameter t = 1; 
+
+/*
+parameter q = 11;
+parameter t = 6;
+*/
+//q=19,  t=10
+//parameter q = 19;
+//parameter t = 10;
+
+//q=41,	 t=20
+//q=59,	 t=30
+//q=79,  t=40
+//q=101, t=50
+//q=127, t=60
+//q=149, t=70
+//q=163, t=80
+//q=191, t=90
+
+/*
+//q=199, t=100
+parameter q = 199;
+parameter t = 100;
+*/
