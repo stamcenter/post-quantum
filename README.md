@@ -12,5 +12,4 @@ Expertise areas:
 - Post-Quantum Transition
 - Post-Quantum Cryptosystems Training
 
-For detailed documentation of modules, systems, and hardware reproductions, please visit: 
-https//www.pqcsecure.org. 
+For detailed documentation of modules, systems, and hardware reproductions, please visit: https://www.pqcsecure.org 
